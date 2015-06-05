@@ -18,8 +18,16 @@ describe("Pizza", function () {
   describe("quantity", function() {
     it("charges a multiple based on the quantity", function() {
       var testPizza = Object.create(Pizza)
-      testPizza.quantity(2)
+      testPizza.quantity("2")
       expect(testPizza.cost).to.equal(16)
+    });
+
+    it("charges a total for all variables", function() {
+      var testPizza = Object.create(Pizza)
+      testPizza.size("large")
+      testPizza.topping("pepperoni")
+      testPizza.quantity("3")
+      expect(testPizza.cost).to.equal(33)
     });
   });
 });
