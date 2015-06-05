@@ -48,7 +48,7 @@ $(document).ready(function() {
 
     var inputtedSize = $("select#size").val();
     var inputtedTopping = $("select#topping").val();
-    var inputtedQuantity = parseInt($("select#quantity").val());
+    var inputtedQuantity = $("select#quantity").val();
 
     newPizza.size(inputtedSize);
     newPizza.topping(inputtedTopping);
