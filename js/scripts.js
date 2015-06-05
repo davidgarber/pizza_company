@@ -9,13 +9,23 @@ var Pizza = {
   },
 
   topping: function(topping) {
-    if (topping === "none") {
-      return this.cost;
-    } else if (topping === "pepperoni") {
-      this.cost = this.cost + 1;
-      return this.cost;
-    }
-  },
+      if (topping === "none") {
+        this.cost = this.cost;
+        return this.cost;
+      } else if (topping === "pepperoni") {
+        this.cost = this.cost + 1;
+        return this.cost;
+      } else if (topping === "sausage") {
+        this.cost = this.cost + 1;
+        return this.cost;
+      } else if (topping === "mushroom") {
+        this.cost = this.cost + 1;
+        return this.cost;
+      } else if (topping === "onion") {
+        this.cost = this.cost + 1;
+        return this.cost;
+      }
+    },
 
   quantity: function(quantity) {
     if (quantity === "1") {
@@ -32,13 +42,6 @@ var Pizza = {
     }
   }
 };
-
-// function resetFields() {
-//   $("select#size").val("")
-//   $("select#topping").val("")
-//   $("select#quantity").val("")
-//
-// }
 
 $(document).ready(function() {
 
