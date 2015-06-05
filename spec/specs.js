@@ -14,4 +14,12 @@ describe("Pizza", function () {
       expect(testPizza.cost).to.equal(9)
     });
   });
+
+  describe("quantity", function() {
+    it("charges a multiple based on the quantity", function() {
+      var testPizza = Object.create(Pizza)
+      testPizza.quantity(2)
+      expect(testPizza.cost).to.equal(16)
+    });
+  });
 });

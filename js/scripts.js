@@ -4,7 +4,7 @@ var Pizza = {
     if (size === "large") {
       this.cost = this.cost + 2;
     } else if (size === "small") {
-      return this.cost
+      return this.cost;
     }
   },
 
@@ -16,4 +16,19 @@ var Pizza = {
       return this.cost;
     }
   },
-}
+
+  quantity: function(quantity) {
+    if (quantity === 1) {
+      return this.cost;
+    } else if (quantity === 2) {
+      this.cost = (this.cost) * 2;
+      return this.cost;
+    } else if (quantity === 3) {
+      this.cost = (this.cost) * 3;
+      return this.cost;
+    } else if (quantity === 4) {
+      this.cost = (this.cost) * 4;
+      return this.cost;
+    }
+  },
+};
