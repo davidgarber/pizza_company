@@ -6,4 +6,12 @@ describe("Pizza", function () {
       expect(testPizza.cost).to.equal(8)
     });
   });
+
+  describe("topping", function() {
+    it("charges extra for a topping", function() {
+      var testPizza = Object.create(Pizza)
+      testPizza.topping("pepperoni")
+      expect(testPizza.cost).to.equal(9)
+    });
+  });
 });
